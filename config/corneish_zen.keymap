@@ -75,7 +75,7 @@
                         bindings = <
    &trans  &kp ESC   &kp LC(LA(U))    &kp LC(LA(UP))    &kp LC(LA(I))     &kp Q   &kp LC(F2) &kp RS(RC(TAB))      &kp RC(TAB)           &kp RC(F3) &kp BSPC  &trans
    &trans  &kp TAB   &kp LC(LA(LEFT)) &kp LC(LA(ENTER)) &kp LC(LA(RIGHT)) &kp W   &kp LEFT   &kp DOWN             &kp UP                &kp RIGHT  &kp ENTER &trans
-   &trans  &kp TILDE &kp LC(LA(J))    &kp LC(LA(DOWN))  &kp LC(LA(K))     &KP H   &kp R      &kp RC(RA(RG(LEFT))) &kp RC(RA(RG(RIGHT))) &kp DEL    &to 2     &trans
+   &trans  &kp TILDE &kp LC(LA(J))    &kp LC(LA(DOWN))  &kp LC(LA(K))     &kp H   &kp R      &kp RC(RA(RG(LEFT))) &kp RC(RA(RG(RIGHT))) &kp DEL    &to 2     &trans
                     	     &kp BSPC &to 0   &kp LGUI   &kp RALT   &to 1    &to 4
                         >;
                 };
