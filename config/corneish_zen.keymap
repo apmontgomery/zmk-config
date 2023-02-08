@@ -31,7 +31,7 @@
    &kp TAB   &kp Q &kp W &kp E      &kp R      &kp T   &kp Y &kp U       &kp I          &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &mt LALT D &mt LGUI F &kp G   &kp H &mt RGUI J  &mt LALT K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C      &kp V      &kp B   &kp N &kp M       &kp COMMA      &kp DOT &kp FSLH &kp ESC
-                  &sk LGUI &mt LALT(LCTRL(LSHIFT)) SPACE  &sk LSHIFT    &kp RET &mo 2 &kp RALT
+                  &sk LGUI &mt LS(LC(LSHIFT)) SPACE  &sk LSHIFT    &kp RET &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
