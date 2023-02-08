@@ -22,11 +22,11 @@
 
                 default_layer {
                         label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// 0 ---------------------------------------------------------------------------------------
+// | TAB  |  Q  |  W  |  E   |  R   |  T  |   |  Y  |  U   |  I   |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |ALT(D)| (F) |  G  |   |  H  | (J) |ALT(K)|  L  |  ;  |      |
+// | SHFT |  Z  |  X  |  C   |  V   |  B  |   |  N  |  M   |  ,   |  .  |  /  | ESC  |
+//                |    | MEH(SPC) | SHFT |   | CTRL | To(1)  | To(4)  |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E      &kp R      &kp T   &kp Y &kp U       &kp I          &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &mt LALT D &mt LGUI F &kp G   &kp H &mt RGUI J  &mt LALT K     &kp L   &kp SEMI &kp SQT
@@ -34,63 +34,79 @@
                   &sk LGUI &mt LS(LC(LALT)) SPACE  &sk LSHIFT    &sk RCTL &to 1 &to 4
                         >;
                 };
+
                 sym_layer {
                         label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// 1 ---------------------------------------------------------------------------------------
+// |  TAB | ESC |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  !  | BKSP | BKSP |
+// | CTRL | TAB |  =  |  ’  |  ’  |  '  |   |  \  |  {  |  }  |  |  | ENTR |      |
+// | SHFT |  ~  |  £  |  ”  |  ”  |  "  |   |  [  |  (  |  )  |  ]  | To(2)|      |
+//                 | BKSP | To(0) | GUI |   | ALT | To(3) | To(4) |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                           	        &kp LGUI     &to 0       &kp SPACE      &kp RET  &trans   &to 4
                         >;
                 };
 
                 num_layer {
                         label = "NUMBER";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// 2 ---------------------------------------------------------------------------------------
+// | TAB  |  ESC  |     |     |  +  |  -  |   |  _  |  7  |  8  |  9  | BKSP  |      |
+// | CTRL |  BT1  | BT2 | BT3 |  *  |  /  |   |  =  |  4  |  5  |  6  | Enter |      |
+// | SHFT | BTCLR | BT4 | BT5 |  %  |  .  |   |  0  |  1  |  2  |  3  | To(2) |      |
+//                        | BKSP | To(0) | GUI |   | ALT | To(1) | To(4) |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &trans
+   &trans &bt BT_CLR &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
                     	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &to 4
                         >;
                 };
 
                 nav_layer {
-                        label = "SCREEN";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        label = "NAV";
+// 3 ---------------------------------------------------------------------------------------
+// | TAB  | ESC |  ↖  |  ↑  |  ↗  |  Q  |   | PWin | PTab  |  NTab | NWin | BKSP  |     |
+// | CTRL | TAB |  ←  |  ▣  |  →  |  W  |   |  ◄   |   ▼   |   ▲   |   ►  | ENTR  |     |
+// | SHFT |  ~  |  ↙  |  ↓  |  ↘  |  H  |   |   R  | NScrn | PScrn |  Del | To(2) |     |
+//             | Ctrl-Alt | To(0) |    |   | ALT | To(1) | To(4) |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &trans
+   &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
                     	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &to 4
                         >;
                 };
 
                 media_layer {
                         label = "MEDIA";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// 4 ---------------------------------------------------------------------------------------
+// | TAB  |      | Mute | Vol- | Vol+ |      |   | scrl◄  | scrl▼ | scrl▲ | scrl►  |  mse3  |      |
+// | CTRL | Prev | Next | NTrk | PTrk | Play |   | mse ◄  | mse ▼ | mse ▲ | mse ►  |  mse2  |      |
+// | SHFT |      |      |  Br- |  Br+ | Stop |   | mseac0 | mse 1 | mse 2 | mseac1 | mseac2 |  ~   |
+//                         |     |     |     |   | mse 1  | To(1) | To(4) |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+   &trans &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &trans
+   &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
                     	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &trans
+                        >;
+                };
+
+                bt_layer {
+                        label = "BLUETOOTH";
+// 5 ---------------------------------------------------------------------------------------
+// | TAB  |     |     |     |     |     |   |     |     |     |     |      |      |
+// | CTRL |     |     |     |     |     |   |     | BT4 | BT5 |     |      |      |
+// | SHFT |     |     |     |     |     |   |BTCLR| BT1 | BT2 | BT3 |      |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &kp LGUI     &to 0       &kp SPACE      &kp RET  &trans   &to 4
                         >;
                 };
         };
