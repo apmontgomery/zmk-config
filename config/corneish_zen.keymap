@@ -43,10 +43,10 @@
 // | SHFT |  ~  |  £  |  ”  |  ”  |  "  |   |  [  |  (  |  )  |  ]  | To(2)|      |
 //                 | BKSP | To(0) | GUI |   | ALT | To(3) | To(4) |
                         bindings = <
-   &trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &trans  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &to 0       &kp SPACE      &kp RET  &trans   &to 4
+   &trans &kp ESC   &kp AT     &kp HASH     &kp DLLR         &kp PRCNT         &kp CARET &kp AMPS &kp KP_MULTIPLY &kp EXCL &kp BSPC  &trans
+   &trans &kp TAB   &kp EQUAL  &kp LA(RBRC) &kp LS(LA(RBRC)) &kp SINGLE_QUOTE  &kp BSLH  &kp LBRC &kp RBRC        &kp PIPE &kp ENTER &trans
+   &trans &kp TILDE &kp LA(N3) &kp LA(LBRC) &kp LS(LA(LBRC)) &kp DOUBLE_QUOTES &kp LBKT  &kp LPAR &kp RPAR        &kp RBKT &to 2     &trans
+                          	        &kp BSPC     &to 0   &kp LGUI      &kp RALT  &to 3   &to 4
                         >;
                 };
 
@@ -58,10 +58,10 @@
 // | SHFT | BTCLR | BT4 | BT5 |  %  |  .  |   |  0  |  1  |  2  |  3  | To(2) |      |
 //                        | BKSP | To(0) | GUI |   | ALT | To(1) | To(4) |
                         bindings = <
-   &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &trans
-   &trans &bt BT_CLR &bt BT_SEL 3 &bt BT_SEL 4   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &trans
-                    	     &kp LGUI &to 0   &kp SPACE   &kp RET   &trans    &to 4
+   &trans &kp ESC      &trans       &trans       &kp PLUS         &kp MINUS     &kp UNDERSCORE &kp N7  &kp N8 &kp N9 &kp BSPC  &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp KP_MULTIPLY  &kp KP_DIVIDE &kp EQUAL      &kp N4  &kp N5 &kp N6 &kp ENTER &trans
+   &trans &bt BT_CLR &bt BT_SEL 3 &bt BT_SEL 4   &kp PERCENT      &kp DOT       &kp N0         &kp N1  &kp N2 &kp N3 &trans    &trans
+                    	     &kp BSPC &to 0   &kp LGUI   &kp RALT   &to 1    &to 4
                         >;
                 };
 
