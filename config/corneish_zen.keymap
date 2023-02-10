@@ -89,7 +89,7 @@
 // | SHFT |      |      |  Br- |  Br+ | Stop |   | mseac0 | mse 1 | mse 2 | mseac1 | mseac2 |  ~   |
 //                      | BKSP | To(0) |    |   | ALT  | To(1) | To(4) |
                         bindings = <
-   &trans &trans      &kp K_MUTE             &kp C_VOL_DN              &kp C_VOL_UP &trans           &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans &trans
+   &trans &trans      &kp K_MUTE             &kp C_VOL_DN              &kp C_VOL_UP &trans           &mwh SCROLL_RIGHT &mwh SCROLL_UP &mwh SCROLL_DOWN &mwh SCROLL_LEFT &trans &trans
    &trans &kp C_PREV  &kp LG(LS(LEFT_ARROW)) &kp (LG(LS(RIGHT_ARROW))) &kp C_NEXT   &kp C_PLAY_PAUSE &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT   &trans &trans
    &trans &trans      &trans                 &kp C_BRI_UP              &kp C_BRI_DN &trans           &trans           &mkp LCLK        &mkp RCLK      &trans            &trans &trans
                     	     &kp BSPC &to 0   &kp LGUI   &mkp LCLK  &mkp RCLK    &trans
