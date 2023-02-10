@@ -17,6 +17,15 @@
   };
 };
 
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent=<1>;
+};
+
+&mwh {
+    time-to-max-speed-ms = <500> 
+    acceleration-exponent=<1>;
+};
 / {
         keymap {
                 compatible = "zmk,keymap";
