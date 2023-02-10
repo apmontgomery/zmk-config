@@ -26,16 +26,18 @@
     time-to-max-speed-ms = <500>;
     acceleration-exponent=<1>;
 };
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk RCTL>, <&sk RALT>, <&sk RC(RALT)>;
-        };
-    };
+
 / {
+        behaviors {
+                td0: tap_dance_0 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_0";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&sk RCTL>, <&sk RALT>, <&sk RC(RALT)>;
+                };
+        };
+        
         keymap {
                 compatible = "zmk,keymap";
 
