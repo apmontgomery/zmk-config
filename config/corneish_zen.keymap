@@ -76,11 +76,11 @@
 //                 | BKSP | To(0) | GUI |   | OPT | To(3) | To(4) |
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬───────────────┬─────────────────╮   ╭────────────┬────────────┬──────────────┬────────────┬────────────┬───────────╮
-     &trans       &kp ESC      &kp AT       &kp HASH    &kp DLLR         &kp PRCNT             &kp CARET    &kp AMPS    &kp KP_MULTIPLY &kp EXCL     &kp BSPC     &trans
+     &trans       &kp ESC      &kp AT       &kp HASH    &kp DLLR         &kp PRCNT             &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp EXCL     &kp BSPC     &trans
 // ├────────────┼────────────┼────────────┼────────────┼───────────────┼─────────────────┤   ├────────────┼────────────┼──────────────┼────────────┼────────────┼───────────┤
-     &trans       &kp TAB      &kp EQUAL   &kp LA(RBRC) &kp LS(LA(RBRC)) &kp SINGLE_QUOTE     &kp BSLH     &kp LBRC     &kp RBRC        &kp PIPE     &kp ENTER    &trans
+     &trans       &kp TAB      &kp EQUAL   &kp LA(RBRC) &kp LS(LA(RBRC)) &kp SINGLE_QUOTE      &kp BSLH     &kp LBRC     &kp RBRC        &kp PIPE     &kp ENTER    &trans
 // ├────────────┼────────────┼────────────┼────────────┼───────────────┼─────────────────┤   ├────────────┼────────────┼──────────────┼────────────┼────────────┼───────────┤
-     &trans       &kp TILDE    &kp LA(N3)  &kp LA(LBRC) &kp LS(LA(LBRC)) &kp DOUBLE_QUOTES    &kp LBKT     &kp LPAR     &kp RPAR        &kp RBKT     &to 2        &trans
+     &trans       &kp TILDE    &kp LA(N3)  &kp LA(LBRC) &kp LS(LA(LBRC)) &kp DOUBLE_QUOTES     &kp LBKT     &kp LPAR     &kp RPAR        &kp RBKT     &to 2        &trans
 // ╰────────────┴────────────┴────────────┼────────────┼───────────────┼─────────────────┤   ├────────────┼────────────┼──────────────┴────────────┴────────────┴───────────╯
                    	                    &kp BSPC    &to 0            &kp LGUI              &kp RALT     &to 3        &to 4
 //                                        ╰────────────┴───────────────┴─────────────────╯   ╰────────────┴────────────┴──────────────╯
