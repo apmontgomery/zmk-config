@@ -86,7 +86,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <400>;
                 bindings = <&to QWERTY>, <&to NAV>, <&to MEDIABT>;
                 };
                 symNumMse: tap_dance_3 {
