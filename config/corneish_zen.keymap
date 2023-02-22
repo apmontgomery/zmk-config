@@ -97,7 +97,7 @@
                 bindings = <&to SYMBOL>, <&to NUMBER>, <&to MOUSE>;
                 };
                 mediaCtrl: media_hold_tap {
-                compatible = "zmk,behabior-hold-tap";
+                compatible = "zmk,behavior-hold-tap";
                 label = "MEDIA_HOLD_TAP";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
