@@ -60,20 +60,20 @@
 
 / {
         behaviors {
-                qwertyMeh: meh_hold_qwerty_layer_tap {
+                ms: mod_sticky_key {
                 compatible = "zmk,behavior-hold-tap";
-                label = "MEH_HOLD_QWERTY_LAYER_TAP";
+                label = "MOD_STICKY_KEY";
                 #binding-cells = <2>;
                 flavor = "hold-preferred";
                 tapping-term-ms = <200>;
-                bindings = <&kp>, <&to>;
+                bindings = <&kp>, <&sk>;
                 };
                 ctrlAlt: tap_dance_0 {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_0";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&sk RALT>, <&sk RCTL>, <&sk RC(RALT)>;
+                bindings = <&ms LS(LC(LALT)) RALT>, <&sk RCTL>, <&sk RC(RALT)>;
                 };
                 shiftCap: tap_dance_1 {
                 compatible = "zmk,behavior-tap-dance";
@@ -87,7 +87,7 @@
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&qwertyMeh  LS(LC(LALT)) QWERTY>, <&to NAV>, <&to MEDIABT>;
+                bindings = <&to QWERTY>, <&to NAV>, <&to MEDIABT>;
                 };
                 symNumMse: tap_dance_3 {
                 compatible = "zmk,behavior-tap-dance";
