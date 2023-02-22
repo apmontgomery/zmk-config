@@ -59,7 +59,7 @@
                 qwertyMeh: meh_hold_qwerty_layer_tap {
                 compatible = "zmk,behavior-hold-tap";
                 label = "MEH_HOLD_QWERTY_LAYER_TAP";
-                #binding-cells = <0>;
+                #binding-cells = <2>;
                 flavor = "tap-unless-interrupted";
                 tapping-term-ms = <200>;
                 bindings = <&kp>, <&to>;
