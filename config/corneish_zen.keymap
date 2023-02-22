@@ -60,14 +60,14 @@
 
 / {
         behaviors {
-                qwertyMeh: meh_hold_qwerty_layer_tap {
-                compatible = "zmk,behavior-hold-tap";
-                label = "MEH_HOLD_QWERTY_LAYER_TAP";
-                #binding-cells = <2>;
-                flavor = "tap-unless-interrupted";
-                tapping-term-ms = <200>;
-                bindings = <&kp>, <&to>;
-                };
+                // qwertyMeh: meh_hold_qwerty_layer_tap {
+                // compatible = "zmk,behavior-hold-tap";
+                // label = "MEH_HOLD_QWERTY_LAYER_TAP";
+                // #binding-cells = <2>;
+                // flavor = "tap-unless-interrupted";
+                // tapping-term-ms = <200>;
+                // bindings = <&kp>, <&to>;
+                // };
                 ctrlAlt: tap_dance_0 {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_0";
@@ -87,7 +87,8 @@
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&qwertyMeh  LS(LC(LALT)) QWERTY>, <&to NAV>, <&to MEDIABT>;
+                bindings = <&to QWERTY>, <&to NAV>, <&to MEDIABT>;
+                // bindings = <&qwertyMeh  LS(LC(LALT)) QWERTY>, <&to NAV>, <&to MEDIABT>;
                 };
                 symNumMse: tap_dance_3 {
                 compatible = "zmk,behavior-tap-dance";
