@@ -86,14 +86,14 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
-                tapping-term-ms = <400>;
+                tapping-term-ms = <300>;
                 bindings = <&to QWERTY>, <&to NAV>, <&to MEDIABT>;
                 };
                 symNumMse: tap_dance_3 {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_3";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <300>;
                 bindings = <&to SYMBOL>, <&to NUMBER>, <&to MOUSE>;
                 };
                 mediaCtrl: media_hold_tap {
