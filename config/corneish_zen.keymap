@@ -82,13 +82,13 @@
                 tapping-term-ms = <200>;
                 bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
                 }; 
-                mehNavMda: tap_dance_2 {
+                mehNavMda: tap_dance_4 {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
                 tapping-term-ms = <300>;
                 bindings = <&mt LS(LC(LALT)) ENTER>, <&to NAV>, <&to MEDIABT>;
-                }; 
+                };
                 qweNavMda: tap_dance_2 {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_2";
