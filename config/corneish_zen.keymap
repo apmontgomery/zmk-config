@@ -38,8 +38,8 @@
 #define DOCK     LC(F3)
 
 // media navigation shortcuts
-#define FWD     &mt LG(LS(RIGHT_ARROW)) 
-#define RWD     &mt LG(LS(LEFT_ARROW)) C_PREV
+#define FWD     LG(LS(RIGHT_ARROW)) 
+#define RWD     LG(LS(LEFT_ARROW))
 
 / {
   chosen {
