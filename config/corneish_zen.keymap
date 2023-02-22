@@ -87,7 +87,7 @@
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
                 tapping-term-ms = <300>;
-                bindings = <&kp LS(LC(LALT))>, <&to NAV>, <&to MEDIABT>;
+                bindings = <&mt LS(LC(LALT)) ENTER>, <&to NAV>, <&to MEDIABT>;
                 }; 
                 qweNavMda: tap_dance_2 {
                 compatible = "zmk,behavior-tap-dance";
