@@ -62,7 +62,7 @@
                 #binding-cells = <0>;
                 flavor = "tap-unless-interrupted";
                 tapping-term-ms = <200>;
-                bindings = <&kp LS(LC(LALT))>, <&to QWERTY>;
+                bindings = <&kp>, <&to>;
                 };
                 ctrlAlt: tap_dance_0 {
                 compatible = "zmk,behavior-tap-dance";
@@ -83,7 +83,7 @@
                 label = "TAP_DANCE_2";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&qwertyMeh>, <&to NAV>, <&to MEDIABT>;
+                bindings = <&qwertyMeh  LS(LC(LALT)) QWERTY>, <&to NAV>, <&to MEDIABT>;
                 };
                 symNumMse: tap_dance_3 {
                 compatible = "zmk,behavior-tap-dance";
