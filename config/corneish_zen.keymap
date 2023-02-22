@@ -81,13 +81,6 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
-                }; 
-                mehNavMda: tap_dance_4 {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_2";
-                #binding-cells = <0>;
-                tapping-term-ms = <300>;
-                bindings = <&mt LS(LC(LALT)) ENTER>, <&to NAV>, <&to MEDIABT>;
                 };
                 qweNavMda: tap_dance_2 {
                 compatible = "zmk,behavior-tap-dance";
@@ -163,7 +156,7 @@
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
      &none   &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &none
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┴───────┴───────┴───────╯
-                       &kp RGUI &mehNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
+                       &kp LGUI &qweNavMda &sk SPACE  &kp LSHIFT &symNumMse &ctrlAlt
 //                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
                         >;
                 };
@@ -178,7 +171,7 @@
 // ├────────┼──────────┼──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┼────────┼─────────┼─────────┤
      &none   &kp TILDE   &kp WBTMLEFT  &kp WBOTTOM &kp WBTMRIGHT &none            &none       &none       &none       &none     &none      &none
 // ╰────────┴──────────┴──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┴────────┴─────────┴─────────╯
-                                                  &kp RGUI &qweNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
+                                                  &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
 //                                               ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
                         >;
                 };
@@ -193,7 +186,7 @@
 // ├───────┼────────┼─────────────────────┼────────────────┼─────────────────────┼────────────┤   ├──────────┼────────────┼────────────┼────────────┼──────────┼──────┤
      &none  &trans    &trans               &kp C_BRI_UP     &kp C_BRI_DN          &trans           &none      &none        &none        &none        &none      &none
 // ╰───────┴────────┴─────────────────────┼────────────────┼─────────────────────┼────────────┤   ├──────────┼────────────┼────────────┴────────────┴──────────┴──────╯
-                                                                  &kp RGUI &qweNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
+                                                                  &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
 //                                                                ╰─────────┴────────┴────────╯   ╰─────────┴─────────┴──────────╯
                         >;
                 };
@@ -208,8 +201,8 @@
 // ├─────────┼─────────┼────────────┼────────────┼───────────────┼─────────────────┤   ├────────────┼────────────┼──────────────┼────────────┼────────────┼───────────┤
      &none    &kp TILDE &kp LA(N3)  &kp LA(LBRC) &kp LS(LA(LBRC)) &kp DOUBLE_QUOTES     &kp LBKT     &kp LPAR     &kp RPAR        &kp RBKT     &none        &none
 // ╰─────────┴─────────┴────────────┼────────────┼───────────────┼─────────────────┤   ├────────────┼────────────┼──────────────┴────────────┴────────────┴───────────╯
-                                                             &kp RGUI &qweNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
-//                                                           ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
+                                                      &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
+//                                                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
                         >;
                 };
 
@@ -223,8 +216,8 @@
 // ├─────────┼─────────────┼──────────┼─────────────┼───────────────┼──────────────┤   ├──────────────┼────────────┼────────────┼────────────┼────────────┼───────────┤
      &none    &kp LEFT_SHIFT &none     &kp PERCENT    &kp CARET      &kp DOT            &kp N0         &kp N1       &kp N2       &kp N3       &none       &none
 // ╰─────────┴─────────────┴──────────┼─────────────┼───────────────┼──────────────┤   ├──────────────┼────────────┼────────────┴────────────┴────────────┴───────────╯
-                                                             &kp RGUI &qweNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
-//                                                           ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
+                                                      &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
+//                                                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
                         >;
                 };
 
@@ -238,7 +231,7 @@
 // ├───────┼────────┼───────┼──────┼──────┼───────┤   ├─────────────────┼───────────────┼───────────────┼───────────────┼──────────────┼──────┤
      &none  &kp TILDE &none  &none  &none  &none       &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none         &none
 // ╰───────┴────────┴───────┼──────┼──────┼───────┤   ├─────────────────┼───────────────┼───────────────┴───────────────┴──────────────┴──────╯
-                       &kp RGUI &qweNavMda &sk LSHIFT  &mkp LCLK &mkp RCLK &symNumMse
+                       &kp LGUI &qweNavMda &sk LSHIFT  &mkp LCLK &mkp RCLK &symNumMse
 //                    ╰──────────┴────────┴───────╯   ╰─────────┴─────────┴──────────╯
                         >;
                 };
