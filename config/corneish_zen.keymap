@@ -82,6 +82,13 @@
                 tapping-term-ms = <200>;
                 bindings = <&sk LSHIFT>, <&kp CAPSLOCK>;
                 }; 
+                mehNavMda: tap_dance_2 {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_2";
+                #binding-cells = <0>;
+                tapping-term-ms = <300>;
+                bindings = <&kp LS(LC(LALT))>, <&to NAV>, <&to MEDIABT>;
+                }; 
                 qweNavMda: tap_dance_2 {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_2";
@@ -156,7 +163,7 @@
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
      &none   &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &none
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┴───────┴───────┴───────╯
-                       &kp RGUI &qweNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
+                       &kp RGUI &mehNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
 //                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
                         >;
                 };
