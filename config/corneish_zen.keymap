@@ -38,8 +38,10 @@
 #define DOCK     LC(F3)
 
 // media navigation shortcuts
-#define FWD     LG(LS(RIGHT_ARROW)) 
-#define RWD     LG(LS(LEFT_ARROW))
+#define FWD10S   LG(LA(RIGHT_ARROW)) 
+#define RWD10S   LG(LA(LEFT_ARROW))
+#define FWD1M   LG(LS(RIGHT_ARROW)) 
+#define RWD1M   LG(LS(LEFT_ARROW))
 
 / {
   chosen {
@@ -124,7 +126,7 @@
 // ╭─ MEDIA/BT ──────────────────╮   ╭─────────────────────────────╮
 // ⎟ ESC ⎟ mute⎟ vol-⎟ vol+ ⎟    ⎟   ⎟ clr⦖⎟  ⦖1 ⎟  ⦖2 ⎟ ⦖3 ⎟  ⌫  ⎟
 // ⎟  ⇥  ⎟  ◄◄ ⎟  ►  ⎟  ►►  ⎟  ▣ ⎟   ⎟     ⎟  ⦖4 ⎟  ⦖5 ⎟    ⎟  ⮐  ⎟
-// ⎟  ~  ⎟     ⎟  ☼- ⎟  ☼+  ⎟    ⎟   ⎟     ⎟     ⎟     ⎟     ⎟     ⎟
+// ⎟  ~  ⎟ ◄◄◄ ⎟  ◄◄ ⎟  ►►  ⎟ ►►►⎟   ⎟     ⎟  ☼- ⎟  ☼+ ⎟     ⎟     ⎟
 // ╰───────────⎟  ⌘  ⎟  ⧉  ⎟  ⇧  ⎟   ⎟  ␣  ⎟ ⧉  ⎟ ⌃⎇ ⎟───────────╯
 //             ╰─────────────────╯   ╰─────────────────╯
 // ╭─ SYMBOL ────────────────────╮   ╭─────────────────────────────╮
@@ -184,7 +186,7 @@
 // ├───────┼────────┼─────────────────────┼────────────────┼─────────────────────┼────────────┤   ├──────────┼────────────┼────────────┼────────────┼──────────┼──────┤
      &none  &kp TAB  &mediaCtrl LEFT C_PREV &kp C_PLAY_PAUSE &mediaCtrl RIGHT C_NEXT &kp LG(F)     &none      &bt BT_SEL 3 &bt BT_SEL 4 &none        &kp ENTER  &none
 // ├───────┼────────┼─────────────────────┼────────────────┼─────────────────────┼────────────┤   ├──────────┼────────────┼────────────┼────────────┼──────────┼──────┤
-     &none  &trans    &trans               &kp C_BRI_DN     &kp C_BRI_UP          &trans           &none      &none        &none        &none        &none      &none
+     &none  &trans   &kp RWD1M             &kp RWD10S       &kp FWD10S            &kp FWD1M        &none      &kp C_BRI_DN &kp C_BRI_UP &none        &none      &none
 // ╰───────┴────────┴─────────────────────┼────────────────┼─────────────────────┼────────────┤   ├──────────┼────────────┼────────────┴────────────┴──────────┴──────╯
                                                                   &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
 //                                                                ╰─────────┴────────┴────────╯   ╰─────────┴─────────┴──────────╯
