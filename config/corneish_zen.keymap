@@ -106,6 +106,13 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp>, <&kp>;
                 };
+                dotEnter: dot_enter {
+                compatible = "zmk,behavior-tap-dance";
+                label = "DOT_ENTER";
+                #binding-cells = <0>;
+                tapping-term-ms = <300>;
+                bindings = <&kp DOT>, <&kp ENTER>, <&kp RA(SEMI)>;
+                };
         };
 
         keymap {
@@ -156,7 +163,7 @@
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
      &none   &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K     &kp L   &kp SEMI &none
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
-     &none   &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &none
+     &none   &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &dotEnter &kp FSLH &none
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┴───────┴───────┴───────╯
                        &kp LGUI &qweNavMda &sk LSHIFT  &kp SPACE &symNumMse &ctrlAlt
 //                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
@@ -171,7 +178,7 @@
 // ├────────┼──────────┼──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┼────────┼─────────┼─────────┤
      &none   &kp TAB     &kp WLEFT     &kp WCENTER &kp WRIGHT    &kp WPREVSCRN    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT &kp ENTER  &none
 // ├────────┼──────────┼──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┼────────┼─────────┼─────────┤
-     &none   &kp TILDE   &kp WBTMLEFT  &kp WBOTTOM &kp WBTMRIGHT &none            &none       &none       &none       &none     &none      &none
+     &none   &kp TILDE   &kp WBTMLEFT  &kp WBOTTOM &kp WBTMRIGHT &kp LC(UP)            &none       &none       &none       &none     &none      &none
 // ╰────────┴──────────┴──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┴────────┴─────────┴─────────╯
                                                   &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
 //                                               ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
