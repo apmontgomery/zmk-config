@@ -55,11 +55,6 @@
     acceleration-exponent=<1>;
 };
 
-&mwh {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent=<1>;
-};
-
 / {
         behaviors {
                 ms: mod_sticky_key {
