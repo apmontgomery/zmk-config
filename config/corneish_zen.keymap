@@ -17,7 +17,6 @@
 #define SYMBOL  3
 #define NUMBER  4
 #define MOUSE   5
-#define FNLAYER 6
 
 // window manager shortcuts
 #define WTOPLEFT  LC(LA(U))
@@ -215,9 +214,9 @@
 // ╭─────────┬──────────────┬───────────┬─────────────┬───────────────┬──────────────╮   ╭──────────────┬────────────┬────────────┬────────────┬────────────┬───────────╮
      &kp LC(A)    &kp ESC       &kp LESS_THAN &kp PLUS      &kp MINUS     &kp GREATER_THAN    &kp UNDERSCORE &kp N7       &kp N8       &kp N9       &kp BSPC     &kp COLON
 // ├─────────┼──────────────┼───────────┼─────────────┼───────────────┼──────────────┤   ├──────────────┼────────────┼────────────┼────────────┼────────────┼───────────┤
-     &mo FNLAYER    &kp TAB       &kp LPAR     &kp KP_MULTIPLY &kp KP_DIVIDE &kp RPAR           &kp EQUAL      &kp N4       &kp N5       &kp N6       &kp ENTER    &kp SEMI
+     &mo 6    &kp TAB       &kp LPAR     &kp KP_MULTIPLY &kp KP_DIVIDE &kp RPAR           &kp EQUAL      &kp N4       &kp N5       &kp N6       &kp ENTER    &kp SEMI
 // ├─────────┼──────────────┼───────────┼─────────────┼───────────────┼──────────────┤   ├──────────────┼────────────┼────────────┼────────────┼────────────┼───────────┤
-     &kp LCTRL    &kp LEFT_SHIFT &kp COMMA   &kp PERCENT    &kp CARET      &kp DOT            &kp N0         &kp N1       &kp N2       &kp N3       &kp DOT       &kp QMARK
+     &kp LCTRL    &kp LEFT_SHIFT &kp COMMA   &kp PERCENT    &kp CARET      &kp DOT            &kp N0         &kp N1       &kp N2       &kp N3       &kp DOT       &kp QUESTION
 // ╰─────────┴──────────────┴───────────┼─────────────┼───────────────┼──────────────┤   ├──────────────┼────────────┼────────────┴────────────┴────────────┴───────────╯
                                                        &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
 //                                                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
@@ -230,7 +229,7 @@
 // ╭───────┬────────┬───────┬──────┬──────┬───────╮   ╭─────────────────┬───────────────┬───────────────┬───────────────┬──────────────┬──────╮
      &none  &kp ESC   &none  &none  &none  &none       &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp BACKSPACE &none
 // ├───────┼────────┼───────┼──────┼──────┼───────┤   ├─────────────────┼───────────────┼───────────────┼───────────────┼──────────────┼──────┤
-     &mkp MCLK  &kp TAB   &none  &none  &none  &none       &kp LEFT          &kp DOWN        &kp UP          &kp RIGHT        &kp ENTER     &none
+     &mkp MB3  &kp TAB   &none  &none  &none  &none       &kp LEFT          &kp DOWN        &kp UP          &kp RIGHT        &kp ENTER     &none
 // ├───────┼────────┼───────┼──────┼──────┼───────┤   ├─────────────────┼───────────────┼───────────────┼───────────────┼──────────────┼──────┤
      &none  &kp TILDE &none  &none  &none  &none       &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &none         &none
 // ╰───────┴────────┴───────┼──────┼──────┼───────┤   ├─────────────────┼───────────────┼───────────────┴───────────────┴──────────────┴──────╯
