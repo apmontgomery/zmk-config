@@ -6,7 +6,8 @@
       "Bash(gh run list:*)",
       "Bash(gh run watch:*)",
       "Bash(gh run view:*)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:zmk.dev)"
     ],
     "deny": [],
     "ask": []
