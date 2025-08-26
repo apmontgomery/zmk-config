@@ -139,6 +139,7 @@
 //             ╰─────────────────╯   ╰─────────────────╯
 
                 default_layer {
+                        display-name = "QWERTY";
                         bindings = <
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬──────────┬───────┬───────┬───────╮
     &kp ESC  &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I     &kp O   &kp P   &kp BSPC
@@ -153,6 +154,7 @@
                 };
 
                 nav_layer {
+                        display-name = "NAV";
                         bindings = <
 // ╭────────┬──────────┬──────────────┬───────────┬─────────────┬────────────╮   ╭───────────┬───────────┬───────────┬────────┬─────────┬─────────╮
      &kp GRAVE &kp ESC     &kp WTOPLEFT  &kp WTOP    &kp WTOPRIGHT &kp WNEXTSCRN    &kp FILEMENU &kp TAB_LT &kp TAB_RT  &kp DOCK  &kp BSPC   &kp DEL
@@ -167,6 +169,7 @@
                 };
 
                 media_layer {
+                        display-name = "MEDIA";
                         bindings = <
 // ╭───────┬────────┬─────────────────────┬────────────────┬─────────────────────┬────────────╮   ╭──────────┬────────────┬────────────┬────────────┬──────────┬──────╮
      &kp C_SLEEP  &kp ESC  &kp K_MUTE            &kp C_VOL_DN     &kp C_VOL_UP          &trans           &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
@@ -181,6 +184,7 @@
                 };
 
                 sym_layer {
+                        display-name = "SYMBOL";
                         bindings = <
 // ╭─────────┬─────────┬────────────┬────────────┬───────────────┬─────────────────╮   ╭────────────┬────────────┬──────────────┬────────────┬────────────┬───────────╮
      &kp LPAR    &kp ESC   &kp AT       &kp HASH    &kp DLLR         &kp PRCNT             &kp CARET    &kp AMPS    &kp KP_MULTIPLY  &kp EXCL     &kp BSPC     &kp RPAR
@@ -195,6 +199,7 @@
                 };
 
                 num_layer {
+                        display-name = "NUMBER";
                         bindings = <
 // ╭─────────┬──────────────┬───────────┬─────────────┬───────────────┬──────────────╮   ╭──────────────┬────────────┬────────────┬────────────┬────────────┬───────────╮
      &kp LC(A)    &kp ESC       &kp LESS_THAN &kp PLUS      &kp MINUS     &kp GREATER_THAN    &kp UNDERSCORE &kp N7       &kp N8       &kp N9       &kp BSPC     &kp COLON
@@ -209,6 +214,7 @@
                 };
 
                 mouse_layer {
+                        display-name = "MOUSE";
                         bindings = <
 // ╭───────┬────────┬───────┬──────┬──────┬───────╮   ╭─────────────────┬───────────────┬───────────────┬───────────────┬──────────────┬──────╮
      &none  &kp ESC   &none  &none  &none  &none       &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp BACKSPACE &none
@@ -223,6 +229,7 @@
                 };
 
                 fn_layer {
+                        display-name = "FUNCTION";
                         bindings = <
 // ╭─────────┬──────────────┬───────────┬─────────────┬───────────────┬──────────────╮   ╭──────────────┬────────────┬────────────┬────────────┬────────────┬───────────╮
      &trans      &kp ESC       &kp F10      &kp F11       &kp F12        &trans             &trans         &kp F7       &kp F8       &kp F9       &kp BSPC     &kp F12
