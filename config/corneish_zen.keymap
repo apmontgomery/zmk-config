@@ -109,6 +109,13 @@
                 tapping-term-ms = <200>;
                 bindings = <&mo>, <&symNumMse>;
                 };
+                navHoldTap: nav_hold_tap {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&mo>, <&qweNavMda>;
+                };
                 mediaCtrl: media_hold_tap {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
@@ -168,7 +175,7 @@
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
     &kp LCTRL &kp Z  &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &colonFn F13 0
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┴───────┴───────┴───────╯
-                       &kp LGUI &qweNavMda &sk LSHIFT  &kp SPACE &symHoldTap SYMBOL 0 &ctrlAlt
+                       &kp LGUI &navHoldTap NAV 0 &sk LSHIFT  &kp SPACE &symHoldTap SYMBOL 0 &ctrlAlt
 //                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
                         >;
                 };
