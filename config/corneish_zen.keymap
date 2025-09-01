@@ -142,18 +142,11 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp>, <&wCenter>;
                 };
-                colonFn: colon_fn_hold_tap {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                flavor = "tap-preferred";
-                tapping-term-ms = <200>;
-                bindings = <&sk>, <&colonTapDance>;
-                };
                 colonTapDance: colon_tap_dance {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp COLON>, <&kp LG(SPACE)>;
+                bindings = <&kp COLON>, <&kp LC(LG(D))>;
                 };
                 symHoldTap: symbol_hold_tap {
                 compatible = "zmk,behavior-hold-tap";
@@ -226,7 +219,7 @@
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
     &kp TAB  &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp ENTER
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
-    &kp LCTRL &kp Z  &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &colonFn GLOBE 0
+    &kp LCTRL &kp Z  &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &colonTapDance
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┴───────┴───────┴───────╯
                        &kp LGUI &navHoldTap NAV 0 &sk LSHIFT  &kp SPACE &symHoldTap SYMBOL 0 &ctrlAlt
 //                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
