@@ -21,21 +21,36 @@
 
 // window manager shortcuts
 #define WTOPLEFT  LC(LA(U))
-#define WTOP      LC(LA(UP))
 #define WTOPRIGHT LC(LA(I))
-#define WLEFT     LC(LA(LEFT))
-#define WCENTER   LC(LA(ENTER))
-#define WRIGHT    LC(LA(RIGHT))
 #define WBTMLEFT  LC(LA(J))
-#define WBOTTOM   LC(LA(DOWN))
 #define WBTMRIGHT LC(LA(K))
 #define WNEXTSCRN RC(RA(RG(RIGHT)))
 #define WPREVSCRN RC(RA(RG(LEFT)))
+// Window thirds
+#define WLEFT_THIRD LC(LA(D))
+#define WCENTER_THIRD LC(LA(F))
+#define WRIGHT_THIRD LC(LA(G))
+#define WTOP_THIRD LC(LA(D))  // Using D for consistency
+#define WBOTTOM_THIRD LC(LA(G))  // Using G for consistency
+// Window halves
+#define WLEFT_HALF LC(LA(LEFT))
+#define WRIGHT_HALF LC(LA(RIGHT))
+#define WTOP_HALF LC(LA(UP))
+#define WBOTTOM_HALF LC(LA(DOWN))
+// Window two-thirds
+#define WLEFT_TWO_THIRDS LC(LA(E))
+#define WCENTER_TWO_THIRDS LC(LA(R))
+#define WRIGHT_TWO_THIRDS LC(LA(T))
+// Window center and fullscreen
+#define WCENTER_HALF LC(LA(C))
+#define WFULLSCREEN LG(LS(F))  // Cmd+Shift+F for fullscreen
+#define WRESTORE LC(LA(BACKSPACE))
 
-// tab navigation shotrcuts
+// tab navigation shortcuts
 #define TAB_RT   LC(TAB)
 #define TAB_LT   LC(LS(TAB))
-#define FILEMENU LC(F2)
+// macOS specific commands
+#define FILEMENU LG(LS(SLASH))  // Cmd+Shift+/ for help menu search
 #define DOCK     LC(F3)
 
 // media navigation shortcuts
@@ -89,18 +104,56 @@
                 tapping-term-ms = <300>;
                 bindings = <&to SYMBOL>, <&to NUMBER>, <&to MOUSE>;
                 };
+                // Window positioning tap dances
+                wLeft: window_left_dance {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp WLEFT_THIRD>, <&kp WLEFT_HALF>, <&kp WLEFT_TWO_THIRDS>;
+                };
+                wRight: window_right_dance {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp WRIGHT_THIRD>, <&kp WRIGHT_HALF>, <&kp WRIGHT_TWO_THIRDS>;
+                };
+                wTop: window_top_dance {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp WTOP_THIRD>, <&kp WTOP_HALF>, <&kp WTOP_THIRD>;
+                };
+                wBottom: window_bottom_dance {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp WBOTTOM_THIRD>, <&kp WBOTTOM_HALF>, <&kp WBOTTOM_THIRD>;
+                };
+                wCenter: window_center_dance {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp WCENTER_THIRD>, <&kp WCENTER_HALF>, <&kp WCENTER_TWO_THIRDS>;
+                };
+                wCenterHold: window_center_hold {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&kp>, <&wCenter>;
+                };
                 colonFn: colon_fn_hold_tap {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <200>;
-                bindings = <&kp>, <&colonTapDance>;
+                bindings = <&sk>, <&colonTapDance>;
                 };
                 colonTapDance: colon_tap_dance {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp COLON>, <&kp LS(F13)>;
+                bindings = <&kp COLON>, <&kp LS(F20)>;
                 };
                 symHoldTap: symbol_hold_tap {
                 compatible = "zmk,behavior-hold-tap";
@@ -173,7 +226,7 @@
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
     &kp TAB  &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp ENTER
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┼───────┼───────┼───────┤
-    &kp LCTRL &kp Z  &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &colonFn F13 0
+    &kp LCTRL &kp Z  &kp X   &kp C   &kp V   &kp B       &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &colonFn F20 0
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤   ├───────┼───────┼──────────┴───────┴───────┴───────╯
                        &kp LGUI &navHoldTap NAV 0 &sk LSHIFT  &kp SPACE &symHoldTap SYMBOL 0 &ctrlAlt
 //                     ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
@@ -184,11 +237,11 @@
                         display-name = "NAV";
                         bindings = <
 // ╭────────┬──────────┬──────────────┬───────────┬─────────────┬────────────╮   ╭───────────┬───────────┬───────────┬────────┬─────────┬─────────╮
-     &kp GRAVE &kp ESC     &kp WTOPLEFT  &kp WTOP    &kp WTOPRIGHT &kp WNEXTSCRN    &kp FILEMENU &kp TAB_LT &kp TAB_RT  &kp DOCK  &kp BSPC   &kp DEL
+     &kp GRAVE &kp ESC     &kp WTOPLEFT  &wTop       &kp WTOPRIGHT &kp WNEXTSCRN    &kp FILEMENU &kp TAB_LT &kp TAB_RT  &kp DOCK  &kp BSPC   &kp DEL
 // ├────────┼──────────┼──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┼────────┼─────────┼─────────┤
-     &kp LC(A) &kp TAB     &kp WLEFT     &kp WCENTER &kp WRIGHT    &kp WPREVSCRN    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT &kp ENTER  &kp LC(W)
+     &kp LC(A) &kp TAB     &wLeft        &wCenterHold WFULLSCREEN 0 &wRight       &kp WPREVSCRN    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT &kp ENTER  &kp LC(W)
 // ├────────┼──────────┼──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┼────────┼─────────┼─────────┤
-     &kp LC(B) &kp TILDE   &kp WBTMLEFT  &kp WBOTTOM &kp WBTMRIGHT &kp LC(UP)            &kp HOME       &kp PG_DN       &kp PG_UP       &kp END     &none      &kp LC(C)
+     &kp LC(B) &kp TILDE   &kp WBTMLEFT  &wBottom    &kp WBTMRIGHT &kp LC(UP)            &kp HOME       &kp PG_DN       &kp PG_UP       &kp END     &none      &kp LC(C)
 // ╰────────┴──────────┴──────────────┼───────────┼─────────────┼────────────┤   ├───────────┼───────────┼───────────┴────────┴─────────┴─────────╯
                                                   &kp LGUI &qweNavMda &sk LSHIFT  &kp RALT &symNumMse &ctrlAlt
 //                                               ╰─────────┴────────┴────────╯   ╰────────┴────────┴──────────╯
