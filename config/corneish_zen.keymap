@@ -233,7 +233,7 @@
 // ╭──────────┬──────────┬──────────────┬────────────────────┬─────────────┬────────────╮   ╭────────────┬──────────┬──────────┬────────┬──────────┬─────────╮
      &kp GRAVE &kp ESC     &kp WTOPLEFT  &wTop                &kp WTOPRIGHT &kp WNEXTSCRN    &kp FILEMENU &kp TAB_LT &kp TAB_RT &kp DOCK  &kp BSPC   &kp DEL
 // ├──────────┼──────────┼──────────────┼────────────────────┼─────────────┼────────────┤   ├────────────┼──────────┼──────────┼────────┼──────────┼─────────┤
-     &kp LC(A) &kp TAB     &wLeft        &wCenterHold WMAXIMIZE 0 &wRight     &kp WPREVSCRN    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp ENTER  &kp LC(W)
+     &kp LC(A) &kp TAB     &wLeft        &wCenter              &wRight      &kp WPREVSCRN    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp ENTER  &kp LC(W)
 // ├──────────┼──────────┼──────────────┼────────────────────┼─────────────┼────────────┤   ├────────────┼──────────┼──────────┼────────┼──────────┼─────────┤
      &kp LC(B) &kp TILDE   &kp WBTMLEFT  &wBottom             &kp WBTMRIGHT &kp LC(UP)       &kp HOME     &kp PG_DN  &kp PG_UP  &kp END   &none      &kp LC(C)
 // ╰──────────┴──────────┴──────────────┼────────────────────┼─────────────┼────────────┤   ├────────────┼──────────┼──────────┴────────┴──────────┴─────────╯
