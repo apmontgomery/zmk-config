@@ -138,7 +138,7 @@
                 };
                 wCenterHold: window_center_hold {
                 compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
+                #binding-cells = <1>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <200>;
                 bindings = <&kp>, <&wCenter>;
