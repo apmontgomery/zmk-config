@@ -135,13 +135,13 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp WCENTER_THIRD>, <&kp WCENTER_TWO_THIRDS>, <&kp WMAXIMIZE>;
                 };
-                wCenterHold: window_center_hold {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                flavor = "tap-preferred";
-                tapping-term-ms = <200>;
-                bindings = <&kp>, <&wCenter>;
-                };
+               //  wCenterHold: window_center_hold {
+               //  compatible = "zmk,behavior-hold-tap";
+               //  #binding-cells = <2>;
+               //  flavor = "tap-preferred";
+               //  tapping-term-ms = <200>;
+               //  bindings = <&kp>, <&wCenter>;
+               //  };
                 colonTapDance: colon_tap_dance {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
@@ -232,7 +232,7 @@
 // ╭──────────┬──────────┬─────────────┬────────────┬─────────────┬────────────╮   ╭────────────┬──────────┬──────────┬────────┬──────────┬─────────╮
      &kp GRAVE &kp ESC     &kp WTOPLEFT &wTop        &kp WTOPRIGHT &kp WNEXTSCRN    &kp FILEMENU &kp TAB_LT &kp TAB_RT &kp DOCK  &kp BSPC   &kp DEL
 // ├──────────┼──────────┼─────────────┼────────────┼─────────────┼────────────┤   ├────────────┼──────────┼──────────┼────────┼──────────┼─────────┤
-     &kp LC(A) &kp TAB     &wLeft       &wCenterHold WFULLSCREEN 0     &wRight       &kp WPREVSCRN    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp ENTER  &kp LC(W)
+     &kp LC(A) &kp TAB     &wLeft       &wCenter     &wRight       &kp WPREVSCRN    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT &kp ENTER  &kp LC(W)
 // ├──────────┼──────────┼─────────────┼────────────┼─────────────┼────────────┤   ├────────────┼──────────┼──────────┼────────┼──────────┼─────────┤
      &kp F20   &kp TILDE   &kp WBTMLEFT &wBottom     &kp WBTMRIGHT &kp LC(UP)       &kp HOME     &kp PG_DN  &kp PG_UP  &kp END   &none      &kp LC(C)
 // ╰──────────┴──────────┴─────────────┼────────────┼─────────────┼────────────┤   ├────────────┼──────────┼──────────┴────────┴──────────┴─────────╯
