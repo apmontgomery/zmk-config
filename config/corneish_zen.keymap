@@ -42,7 +42,6 @@
 #define WCENTER_TWO_THIRDS LC(LA(R))
 #define WRIGHT_TWO_THIRDS LC(LA(T))
 // Window center and fullscreen
-#define WCENTER_HALF LC(LA(C))
 #define WMAXIMIZE LC(LA(ENTER))  // Cmd+Shift+F for fullscreen
 #define WFULLSCREEN LGUI(LC(F))  // Cmd+Shift+F for fullscreen
 #define WRESTORE LC(LA(BACKSPACE))
@@ -134,15 +133,15 @@
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp WCENTER_THIRD>, <&kp WCENTER_TWO_THIRDS>, <&kp WMAXIMIZE>;
+                bindings = <&kp WCENTER_THIRD>, <&kp WCENTER_TWO_THIRDS>, <&kp WMAXIMIZE>, <&kp WFULLSCREEN>;
                 };
-               //  wCenterHold: window_center_hold {
-               //  compatible = "zmk,behavior-hold-tap";
-               //  #binding-cells = <2>;
-               //  flavor = "tap-preferred";
-               //  tapping-term-ms = <200>;
-               //  bindings = <&kp>, <&wCenter>;
-               //  };
+                wCenterHold: window_center_hold {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <0>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&kp WFULLSCREEN>, <&wCenter>;
+                };
                 colonTapDance: colon_tap_dance {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
