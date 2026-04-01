@@ -19,7 +19,7 @@
 #define MOUSE   5
 #define FNLAYER 6
 
-// window manager shortcuts
+// window manager shortcuts ok
 #define WTOPLEFT  LC(LA(U))
 #define WTOPRIGHT LC(LA(I))
 #define WBTMLEFT  LC(LA(J))
