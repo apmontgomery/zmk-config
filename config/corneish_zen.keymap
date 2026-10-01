@@ -72,6 +72,16 @@
 };
 
 / {
+        combos {
+                compatible = "zmk,combos";
+
+                number_thumbs {
+                        key-positions = <37 40>; // Middle thumb key on each half
+                        timeout-ms = <200>;
+                        bindings = <&mo NUMBER>;
+                };
+        };
+
         behaviors {
                 ms: mod_sticky_key {
                 compatible = "zmk,behavior-hold-tap";
